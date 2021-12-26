@@ -74,8 +74,22 @@ export const appRoutes: Route[] = [
             initialData: InitialDataResolver,
         },
         children   : [
+            {path: 'homepage', loadChildren: () => import('app/modules/admin/homepage/homepage.module').then(m => m.HomePageModule)},
             {path: 'dashboard', loadChildren: () => import('app/modules/admin/dashboard/dashboard.module').then(m => m.DashboardModule)},
+            
+            {path: 'customer', children: [
+                {path: 'addcustomer', loadChildren: () => import('app/modules/admin/customer/addcustomer/addcustomer.module').then(m => m.AddCustomerModule)},
+                {path: 'searchcustomer', loadChildren: () => import('app/modules/admin/customer/searchcustomer/searchcustomer.module').then(m => m.SearchCustomerModule)},
+            ]},
+
+            {path: 'room', children: [
+                {path: 'ipd', loadChildren: () => import('app/modules/admin/room/ipd/ipd.module').then(m => m.IPDModule)},
+                {path: 'cashier', loadChildren: () => import('app/modules/admin/room/cashier/cashier.module').then(m => m.CashierModule)},
+            ]},
+        
+            {path: 'inventory', loadChildren: () => import('app/modules/admin/inventory/inventory.module').then(m => m.InventoryModule)},
             {path: 'report', loadChildren: () => import('app/modules/admin/report/report.module').then(m => m.ReportModule)},
+            {path: 'setting', loadChildren: () => import('app/modules/admin/setting/setting.module').then(m => m.SettingModule)},
         ]
     }
 ];
