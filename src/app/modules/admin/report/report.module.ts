@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 import { ReportComponent } from 'app/modules/admin/report/report.component';
 
-const exampleRoutes: Route[] = [
+const reportRoutes: Route[] = [
     {
         path     : '',
         component: ReportComponent
@@ -14,7 +14,7 @@ const exampleRoutes: Route[] = [
         ReportComponent
     ],
     imports     : [
-        RouterModule.forChild(exampleRoutes)
+        RouterModule.forChild(reportRoutes)
     ]
 })
 export class ReportModule

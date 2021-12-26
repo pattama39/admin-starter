@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { DashboardComponent } from 'app/modules/admin/dashboard/dashboard.component';
 
-const exampleRoutes: Route[] = [
+const dashboardRoutes: Route[] = [
     {
         path     : '',
         component: DashboardComponent
@@ -16,7 +16,7 @@ const exampleRoutes: Route[] = [
         DashboardComponent
     ],
     imports     : [
-        RouterModule.forChild(exampleRoutes),
+        RouterModule.forChild(dashboardRoutes),
         MatIconModule,
         MatMenuModule
     ]
