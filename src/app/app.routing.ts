@@ -9,15 +9,15 @@ import { InitialDataResolver } from 'app/app.resolvers';
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 export const appRoutes: Route[] = [
 
-    // Redirect empty path to '/dashboard'
-    {path: '', pathMatch : 'full', redirectTo: 'dashboard'},
+    // Redirect empty path to '/homepage'
+    {path: '', pathMatch : 'full', redirectTo: 'homepage'},
 
-    // Redirect signed in user to the '/dashboard'
+    // Redirect signed in user to the '/homepage'
     //
     // After the user signs in, the sign in page will redirect the user to the 'signed-in-redirect'
     // path. Below is another redirection for that path to redirect the user to the desired
     // location. This is a small convenience to keep all main routes together here on this file.
-    {path: 'signed-in-redirect', pathMatch : 'full', redirectTo: 'dashboard'},
+    {path: 'signed-in-redirect', pathMatch : 'full', redirectTo: 'homepage'},
 
     // Auth routes for guests
     {

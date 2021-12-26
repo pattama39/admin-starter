@@ -88,28 +88,28 @@ export const defaultNavigation: FuseNavigationItem[] = [
 ];
 export const compactNavigation: FuseNavigationItem[] = [
     {
-        id   : 'dashboard',
-        title: 'Dashboard',
+        id   : 'homepage',
+        title: 'หน้าแรก',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
-        link : '/dashboard'
+        icon : 'heroicons_outline:home',
+        link : '/homepage'
     }
 ];
 export const futuristicNavigation: FuseNavigationItem[] = [
     {
-        id   : 'dashboard',
-        title: 'Dashboard',
+        id   : 'homepage',
+        title: 'หน้าแรก',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
-        link : '/dashboard'
+        icon : 'heroicons_outline:home',
+        link : '/homepage'
     }
 ];
 export const horizontalNavigation: FuseNavigationItem[] = [
     {
-        id   : 'dashboard',
-        title: 'Dashboard',
+        id   : 'homepage',
+        title: 'หน้าแรก',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
-        link : '/dashboard'
+        icon : 'heroicons_outline:home',
+        link : '/homepage'
     }
 ];
