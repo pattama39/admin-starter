@@ -83,6 +83,7 @@ export const appRoutes: Route[] = [
             ]},
 
             {path: 'room', children: [
+                {path: 'homecare', loadChildren: () => import('app/modules/admin/room/homecare/homecare.module').then(m => m.HomeCareModule)},
                 {path: 'ipd', loadChildren: () => import('app/modules/admin/room/ipd/ipd.module').then(m => m.IPDModule)},
                 {path: 'cashier', loadChildren: () => import('app/modules/admin/room/cashier/cashier.module').then(m => m.CashierModule)},
             ]},

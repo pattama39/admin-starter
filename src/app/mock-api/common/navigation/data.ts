@@ -21,48 +21,43 @@ export const defaultNavigation: FuseNavigationItem[] = [
         title   : 'คนไข้และลูกค้า',
         type    : 'collapsable',
         icon : 'heroicons_outline:user-circle',
-        children: [
-            {
-                id   : 'addcuatomer',
-                title: 'เพิ่มคนไข้และลูกค้า',
-                type : 'basic',
-                icon : 'heroicons_outline:user-add',
-                link : '/customer/addcustomer'
-            },
+        children: [           
             {
                 id   : 'searchcustomer',
-                title: 'ค้นหาคนไข้และลูกค้า',
+                title: 'ค้นหา',
                 type : 'basic',
-                icon : 'heroicons_outline:user',
+                icon : 'heroicons_outline:search-circle',
                 link : '/customer/searchcustomer'
-            }
-        ]
-    },
-    {
-        id      : 'room',
-        title   : 'ห้อง',
-        subtitle: '',
-        type    : 'group',
-        children: [
-            {
-                id   : 'ipd',
-                title: 'พักรักษา',
-                type : 'basic',
-                icon : 'bed',
-                link : '/room/ipd'
             },
             {
-                id   : 'cashier',
-                title: 'การเงิน',
+                id   : 'addcuatomer',
+                title: 'เพิ่ม',
                 type : 'basic',
-                icon : 'heroicons_outline:cash',
-                link : '/room/cashier'
+                icon : 'add_circle_outline',
+                link : '/customer/addcustomer'
             }
         ]
     },
     {
-        id  : 'divider-1',
-        type: 'divider'
+        id   : 'homecare',
+        title: 'ดูแลที่บ้าน',
+        type : 'basic',
+        icon : 'mat_outline:local_hospital',
+        link : '/room/homecare'
+    },
+    {
+        id   : 'ipd',
+        title: 'พักรักษา',
+        type : 'basic',
+        icon : 'bed',
+        link : '/room/ipd'
+    },
+    {
+        id   : 'cashier',
+        title: 'การเงิน',
+        type : 'basic',
+        icon : 'heroicons_outline:cash',
+        link : '/room/cashier'
     },
     {
         id   : 'inventory',
