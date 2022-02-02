@@ -21,7 +21,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         title   : 'คนไข้และลูกค้า',
         type    : 'collapsable',
         icon : 'heroicons_outline:user-circle',
-        children: [           
+        children: [
             {
                 id   : 'searchcustomer',
                 title: 'ค้นหา',

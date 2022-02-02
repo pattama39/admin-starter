@@ -3,16 +3,16 @@
         <div class="w-full max-w-80 sm:w-80 mx-auto sm:mx-0">
             <!-- Logo -->
             <div class="w-12">
-                <img src="assets/images/logo/logo.svg">
+                <img src="assets/images/logo/logosmall.png">
             </div>
 
             <!-- Title -->
-            <div class="mt-8 text-4xl font-extrabold tracking-tight leading-tight">Sign in</div>
+            <div class="mt-8 text-4xl font-extrabold tracking-tight leading-tight">เข้าสู่ระบบ</div>
             <div class="flex items-baseline mt-0.5 font-medium">
-                <div>Don't have an account?</div>
+                <div>คุณเคยมีบัญชี?</div>
                 <a
                     class="ml-1 text-primary-500 hover:underline"
-                    [routerLink]="['/sign-up']">Sign up
+                    [routerLink]="['/sign-up']">สมัครสมาชิก
                 </a>
             </div>
 
@@ -35,22 +35,22 @@
 
                 <!-- Email field -->
                 <mat-form-field class="w-full">
-                    <mat-label>Email address</mat-label>
+                    <mat-label>อีเมล</mat-label>
                     <input
                         id="email"
                         matInput
                         [formControlName]="'email'">
                     <mat-error *ngIf="signInForm.get('email').hasError('required')">
-                        Email address is required
+                        กรุณากรอกอีเมล
                     </mat-error>
                     <mat-error *ngIf="signInForm.get('email').hasError('email')">
-                        Please enter a valid email address
+                        กรุณากรอกรูปแบบอีเมลให้ถูกต้อง
                     </mat-error>
                 </mat-form-field>
 
                 <!-- Password field -->
                 <mat-form-field class="w-full">
-                    <mat-label>Password</mat-label>
+                    <mat-label>รหัสผ่าน</mat-label>
                     <input
                         id="password"
                         matInput
@@ -72,7 +72,7 @@
                             [svgIcon]="'heroicons_solid:eye-off'"></mat-icon>
                     </button>
                     <mat-error>
-                        Password is required
+                        กรุณากรอกรหัสผ่าน
                     </mat-error>
                 </mat-form-field>
 
@@ -81,11 +81,11 @@
                     <mat-checkbox
                         [color]="'primary'"
                         [formControlName]="'rememberMe'">
-                        Remember me
+                        จดจำ
                     </mat-checkbox>
                     <a
                         class="text-md font-medium text-primary-500 hover:underline"
-                        [routerLink]="['/forgot-password']">Forgot password?
+                        [routerLink]="['/forgot-password']">ลืมรหัสผ่าน?
                     </a>
                 </div>
 
@@ -97,7 +97,7 @@
                     [disabled]="signInForm.disabled"
                     (click)="signIn()">
                     <span *ngIf="!signInForm.disabled">
-                        Sign in
+                        เข้าสู่ระบบ
                     </span>
                     <mat-progress-spinner
                         *ngIf="signInForm.disabled"
@@ -108,7 +108,7 @@
                 <!-- Separator -->
                 <div class="flex items-center mt-8">
                     <div class="flex-auto mt-px border-t"></div>
-                    <div class="mx-2 text-secondary">Or continue with</div>
+                    <div class="mx-2 text-secondary">หรือ</div>
                     <div class="flex-auto mt-px border-t"></div>
                 </div>
 
@@ -166,8 +166,8 @@
         <!-- Content -->
         <div class="z-10 relative w-full max-w-2xl">
             <div class="text-7xl font-bold leading-none text-gray-100">
-                <div>Welcome to</div>
-                <div>our community</div>
+                <div>ยินดีต้อนรับสู่</div>
+                <div>ระบบคลินิกของคุณ</div>
             </div>
             <div class="mt-6 text-lg tracking-tight leading-6 text-gray-400">
                 Fuse helps developers to build organized and well coded dashboards full of beautiful and rich modules.

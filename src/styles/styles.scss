@@ -2,3 +2,99 @@
 /*  @ Import/write your custom styles here.
 /*  @ Styles from this file will override 'vendors.scss' and Fuse's base styles.
 /* ----------------------------------------------------------------------------------------------------- */
+.body {
+    /*    background: url('../img/mybg.png') #ffffff;*/
+    background-color: #e9f8da;
+    direction: ltr;
+    margin: 0;
+    min-height: 100%;
+    padding: 0;
+}
+
+.frame-size {
+    width: 50rem;
+}
+
+.icon-14 {
+    font-size: 14px !important;
+}
+
+.icon-22{
+    font-size: 22px !important;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.padding-15 {
+    padding: 15px !important;
+}
+
+.no-margin {
+    margin: 0px !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0px !important;
+}
+
+.margin-top-15 {
+    margin-top: 15px !important;
+}
+
+.txt-color-blueprimary {
+    color: #2b72bd !important;
+}
+
+.well {
+    -moz-box-shadow: 0 1px 1px #ececec;
+    -webkit-box-shadow: 0 1px 1px #ececec;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    box-shadow: 0 1px 1px #ececec;
+    position: relative;
+}
+
+    .well.well-clean {
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        border-color: transparent;
+        box-shadow: none;
+    }
+
+    .well.well-glass {
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        background-color: rgba(255, 255, 255, 0.25);
+        border-color: transparent;
+        box-shadow: none;
+        color: #ffffff;
+    }
+
+    .well.well-light {
+        background: #ffffff;
+        border: 1px solid #e2e2e2;
+    }
+
+    .well.well-light2 {
+        background: #ffffff;
+        border: 0px solid #e2e2e2;
+        border-radius: 5px;
+    }
+
+        .well.well-light2:hover {
+            -webkit-box-shadow: 0 5px 8px rgba(0,0,0,0.175);
+            -moz-box-shadow: 0 5px 8px rgba(0,0,0,0.175);
+            box-shadow: 0 5px 8px rgba(0,0,0,0.175);
+        }
+
+    .well.well-light3 {
+        border-radius: 5px;
+    }
+
+        .well.well-light3:hover {
+            -webkit-box-shadow: 0 5px 8px rgba(0,0,0,0.175);
+            -moz-box-shadow: 0 5px 8px rgba(0,0,0,0.175);
+            box-shadow: 0 5px 8px rgba(0,0,0,0.175);
+        }
