@@ -12,6 +12,7 @@ import { mockApiServices } from 'app/mock-api';
 import { LayoutModule } from 'app/layout/layout.module';
 import { AppComponent } from 'app/app.component';
 import { appRoutes } from 'app/app.routing';
+import { FormsModule } from '@angular/forms';
 import { BussinessComponent } from './modules/admin/setting/bussiness/bussiness.component';
 
 const routerConfig: ExtraOptions = {
@@ -28,6 +29,7 @@ const routerConfig: ExtraOptions = {
         BrowserModule,
         BrowserAnimationsModule,
         RouterModule.forRoot(appRoutes, routerConfig),
+        FormsModule,
 
         // Fuse, FuseConfig & FuseMockAPI
         FuseModule,

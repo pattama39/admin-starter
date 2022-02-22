@@ -19,30 +19,30 @@ export class DbservicesService {
         })
     };
 
-    constructor(private http: HttpClient,
-        private constant: ConstantService
-    ) { }
+    constructor(private http: HttpClient, private constant: ConstantService) { }
 
     bussiness!: BussinessModel[];
     bussinessDetail!: BussinessModel;
 
+    // ดึงข้อมูลสาขา
     getBussiness(code: string) {
         const myparams = {
             'hospitalCode': code
         };
 
-        this.http.get(`${this.constant.demoAPIURL+ 'Bussiness'}/${code}`, { params: myparams })
+        this.http.get(`${this.constant.settingAPIURL+ 'Bussiness'}/${code}`, { params: myparams })
         .toPromise()
         .then(res =>this.bussiness = res as BussinessModel[]);
     }
 
+    // แสดงรายเอียดสาขา
     getBussinessDetail(code: string, id: string) {
         const myparams = {
             'hospitalCode': code,
             'branchCode': id
         };
 
-        this.http.get(`${this.constant.demoAPIURL+ 'Bussiness'}/${code}/${id}`, { params: myparams })
+        this.http.get(`${this.constant.settingAPIURL+ 'Bussiness'}/${code}/${id}`, { params: myparams })
         .toPromise()
         .then(res =>this.bussinessDetail = res as BussinessModel);
     }

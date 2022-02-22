@@ -6,39 +6,48 @@
         <!-- CONTENT GOES HERE -->
         <div class="h-400 min-h-400 max-h-400 border-gray-300 well well-light2">
 
-            <h1 class="padding-15 icon-22"><strong>ข้อมูลคลินิก</strong></h1>
+            <div class="btn-group p-4 g-3" style="width: 85rem !important;">
+                <div class="col-md-6">
+                    <h1 class="pt-3 pl-0 icon-22"><strong>ข้อมูลคลินิก</strong></h1>
+                </div>
+                <div class="col-md-6">
+                    <a [routerLink]="['bussinessdetail', 'newbranch']" class="btn btn-outline-primary p-2.5 float-end" aria-current="page">เพิ่ม</a>
+                </div>
+            </div>
 
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">รหัสสาขา</th>
-                    <th scope="col">ชื่อสาขา</th>
-                    <th scope="col">ที่อยู่</th>
-                    <th scope="col">เบอร์โทรศัพท์</th>
-                  </tr>
-                </thead>
-                <tbody *ngFor="let bussiness of dbService.bussiness; let i=index">
-                  <tr>
-                    <th scope="row">{{ i + 1 }}</th>
-                    <td>
-                        <a [routerLink]="[bussiness.objMorganization.organizationCode, 'bussinessdetail']"
-                           (onClickOrg)="[bussiness.objMorganization.parentOrgCode, bussiness.objMorganization.organizationCode]"
-                           class="txt-color-blueprimary">
-                            {{bussiness.objMorganization.organizationOfficialCode}}
-                        </a>
-                    </td>
-                    <td>{{bussiness.objMorganization.organizationName}}</td>
-                    <td>{{bussiness.objMorganization.currentAddress1}}
-                        {{bussiness.objMorganization.currentTumbonName}}
-                        {{bussiness.objMorganization.currentAmphurName}}
-                        {{bussiness.objMorganization.currentProvinceName}}
-                        {{bussiness.objMorganization.currentPostCode}}
-                    </td>
-                    <td>{{bussiness.objMorganization.currentTelephone}}</td>
-                  </tr>
-                </tbody>
-            </table>
+            <div class="p-4">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">รหัสสาขา</th>
+                        <th scope="col">ชื่อสาขา</th>
+                        <th scope="col">ที่อยู่</th>
+                        <th scope="col">เบอร์โทรศัพท์</th>
+                    </tr>
+                    </thead>
+                    <tbody *ngFor="let bussiness of dbService.bussiness; let i=index">
+                    <tr>
+                        <th scope="row">{{ i + 1 }}</th>
+                        <td>
+                            <a [routerLink]="['bussinessdetail', bussiness.objMorganization.organizationCode]"
+                            (onClickOrg)="[bussiness.objMorganization.parentOrgCode, bussiness.objMorganization.organizationCode]"
+                            class="txt-color-blueprimary">
+                                {{bussiness.objMorganization.organizationOfficialCode}}
+                            </a>
+                        </td>
+                        <td>{{bussiness.objMorganization.organizationName}}</td>
+                        <td>{{bussiness.objMorganization.currentAddress1}}
+                            {{bussiness.objMorganization.currentTumbonName}}
+                            {{bussiness.objMorganization.currentAmphurName}}
+                            {{bussiness.objMorganization.currentProvinceName}}
+                            {{bussiness.objMorganization.currentPostCode}}
+                        </td>
+                        <td>{{bussiness.objMorganization.currentTelephone}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
 
         </div>
 

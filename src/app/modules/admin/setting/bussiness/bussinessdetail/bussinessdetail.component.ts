@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DbservicesService } from 'app/services/dbservices.service';
 
 @Component({
   selector: 'app-bussinessdetail',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bussinessdetail.component.scss']
 })
 export class BussinessdetailComponent implements OnInit {
+    code!: string | null;
+    id!: string | null;
 
-  constructor() { }
+    constructor(private route: ActivatedRoute, public dbService: DbservicesService) { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+        this.code = this.route.snapshot.paramMap.get('hospitalCode');
+        this.id = this.route.snapshot.paramMap.get('branchCode');
+        this.dbService.getBussinessDetail(this.code || 'null', this.id || 'null');
+    }
 
 }

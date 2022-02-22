@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { SettingComponent } from 'app/modules/admin/setting/setting.component';
 import { BussinessComponent } from './bussiness/bussiness.component';
 import { BussinessdetailComponent } from './bussiness/bussinessdetail/bussinessdetail.component';
@@ -17,7 +18,7 @@ const settingRoutes: Route[] = [
                 component: BussinessComponent
             },
             {
-                path    : ':branchCode/bussinessdetail',
+                path    : 'bussinessdetail/:branchCode',
                 component: BussinessdetailComponent
             }
         ]
@@ -29,6 +30,7 @@ const settingRoutes: Route[] = [
         SettingComponent
     ],
     imports: [
+        FormsModule,
         RouterModule.forChild(settingRoutes),
     ]
 })

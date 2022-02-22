@@ -7,7 +7,52 @@
         <div class="h-400 min-h-400 max-h-400 border-gray-300">
 
             <div class="card border-2 frame-size">
-                <div class="">คลินิก</div>
+                <div class="card-header">คลินิก</div>
+
+                <div class="p-4">
+                    <form class="row g-3 padding-15">
+                        <div class="col-md-6">
+                            <label for="inputBranchCode" class="form-label">รหัสสาขา</label>
+                            <input type="text" class="form-control" id="inputBranchCode">
+                            <p>{{dbService.bussinessDetail.objMorganization.organizationOfficialCode}}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputBranchName" class="form-label">ชื่อสาขา</label>
+                            <input type="text" class="form-control" id="inputBranchName">
+                            <p>{{dbService.bussinessDetail.objMorganization.organizationName}}</p>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">ที่อยู่</label>
+                            <input type="text" class="form-control" id="inputAddress">
+                            <p>{{dbService.bussinessDetail.objMorganization.currentAddress1}}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputTumbonName" class="form-label">ตำบล/แขวง</label>
+                            <input type="text" class="form-control" id="inputTumbonName">
+                            <p>{{dbService.bussinessDetail.objMorganization.currentTumbonName}}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAmphurName" class="form-label">อำเภอ/เขต</label>
+                            <input type="text" class="form-control" id="inputAmphurName">
+                            <p>{{dbService.bussinessDetail.objMorganization.currentAmphurName}}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputProvinceName" class="form-label">จังหวัด</label>
+                            <input type="text" class="form-control" id="inputProvinceName">
+                            <p>{{dbService.bussinessDetail.objMorganization.currentProvinceName}}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPostCode" class="form-label">รหัสไปรษณีย์</label>
+                            <input type="text" class="form-control" id="inputPostCode">
+                            <p>{{dbService.bussinessDetail.objMorganization.currentPostCode}}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputTelephone" class="form-label">โทรศัพท์</label>
+                            <input type="text" class="form-control" id="inputTelephone" placeholder="xx-xxx-xxxx">
+                            <p>{{dbService.bussinessDetail.objMorganization.currentTelephone}}</p>
+                        </div>
+                    </form>
+                </div>
             </div>
 
         </div>

@@ -16,9 +16,7 @@ export class BussinessComponent implements OnInit {
     /**
      * Constructor
      */
-    constructor(private route: ActivatedRoute,
-        public dbService: DbservicesService) {
-    }
+    constructor(private route: ActivatedRoute, public dbService: DbservicesService) {}
 
     ngOnInit(): void {
         this.code = this.route.snapshot.paramMap.get('hospitalCode');
