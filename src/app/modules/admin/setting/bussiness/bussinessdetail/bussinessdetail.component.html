@@ -6,50 +6,42 @@
         <!-- CONTENT GOES HERE -->
         <div class="h-400 min-h-400 max-h-400 border-gray-300">
 
-            <div class="card border-2 frame-size">
+            <div class="card border-2">
                 <div class="card-header">คลินิก</div>
 
                 <div class="p-4">
-                    <form class="row g-3 padding-15">
+                    <form *ngIf="[edit]" class="row g-3 padding-15">
                         <div class="col-md-6">
                             <label for="inputBranchCode" class="form-label">รหัสสาขา</label>
-                            <input type="text" class="form-control" id="inputBranchCode">
-                            <p>{{dbService.bussinessDetail.objMorganization.organizationOfficialCode}}</p>
+                            <input type="text" class="form-control" id="inputBranchCode" [value]="dbService.bussinessDetail.objMorganization.organizationOfficialCode">
                         </div>
                         <div class="col-md-6">
                             <label for="inputBranchName" class="form-label">ชื่อสาขา</label>
-                            <input type="text" class="form-control" id="inputBranchName">
-                            <p>{{dbService.bussinessDetail.objMorganization.organizationName}}</p>
+                            <input type="text" class="form-control" id="inputBranchName" [value]="dbService.bussinessDetail.objMorganization.organizationName">
                         </div>
-                        <div class="col-12">
+                        <div class="col-md-6">
                             <label for="inputAddress" class="form-label">ที่อยู่</label>
-                            <input type="text" class="form-control" id="inputAddress">
-                            <p>{{dbService.bussinessDetail.objMorganization.currentAddress1}}</p>
+                            <input type="text" class="form-control" id="inputAddress" [value]="dbService.bussinessDetail.objMorganization.currentAddress1">
                         </div>
                         <div class="col-md-6">
                             <label for="inputTumbonName" class="form-label">ตำบล/แขวง</label>
-                            <input type="text" class="form-control" id="inputTumbonName">
-                            <p>{{dbService.bussinessDetail.objMorganization.currentTumbonName}}</p>
+                            <input type="text" class="form-control" id="inputTumbonName" [value]="dbService.bussinessDetail.objMorganization.currentTumbonName">
                         </div>
                         <div class="col-md-6">
                             <label for="inputAmphurName" class="form-label">อำเภอ/เขต</label>
-                            <input type="text" class="form-control" id="inputAmphurName">
-                            <p>{{dbService.bussinessDetail.objMorganization.currentAmphurName}}</p>
+                            <input type="text" class="form-control" id="inputAmphurName" [value]="dbService.bussinessDetail.objMorganization.currentAmphurName">
                         </div>
                         <div class="col-md-6">
                             <label for="inputProvinceName" class="form-label">จังหวัด</label>
-                            <input type="text" class="form-control" id="inputProvinceName">
-                            <p>{{dbService.bussinessDetail.objMorganization.currentProvinceName}}</p>
+                            <input type="text" class="form-control" id="inputProvinceName" [value]="dbService.bussinessDetail.objMorganization.currentProvinceName">
                         </div>
                         <div class="col-md-6">
                             <label for="inputPostCode" class="form-label">รหัสไปรษณีย์</label>
-                            <input type="text" class="form-control" id="inputPostCode">
-                            <p>{{dbService.bussinessDetail.objMorganization.currentPostCode}}</p>
+                            <input type="text" class="form-control" id="inputPostCode" [value]="dbService.bussinessDetail.objMorganization.currentPostCode">
                         </div>
                         <div class="col-md-6">
                             <label for="inputTelephone" class="form-label">โทรศัพท์</label>
-                            <input type="text" class="form-control" id="inputTelephone" placeholder="xx-xxx-xxxx">
-                            <p>{{dbService.bussinessDetail.objMorganization.currentTelephone}}</p>
+                            <input type="text" class="form-control" id="inputTelephone" placeholder="xx-xxx-xxxx" [value]="dbService.bussinessDetail.objMorganization.currentTelephone">
                         </div>
                     </form>
                 </div>

@@ -12,6 +12,7 @@ import { DbservicesService } from 'app/services/dbservices.service';
 export class BussinessComponent implements OnInit {
     code!: string | null;
     id!: string | null;
+    edit = false;
 
     /**
      * Constructor
@@ -24,8 +25,9 @@ export class BussinessComponent implements OnInit {
     }
 
     onClickOrg(code: string, id: string) {
+        this.edit = !this.edit;
         if (code != null && id != null) {
-            this.dbService.getBussinessDetail(code, id);
+            this.dbService.getBussinessDetail(code, id, this.edit);
         }
     }
 }

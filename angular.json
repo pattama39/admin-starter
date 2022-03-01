@@ -53,9 +53,13 @@
                             "src/@fuse/styles/main.scss",
                             "src/styles/styles.scss",
                             "src/styles/tailwind.scss",
-                            "node_modules/@fortawesome/fontawesome-free/css/all.css"
+                            "node_modules/@fortawesome/fontawesome-free/css/all.css",
+                            "node_modules/datatables.net-dt/css/jquery.dataTables.css"
                         ],
-                        "scripts": []
+                        "scripts": [
+                            "node_modules/datatables.net/js/jquery.dataTables.js",
+                            "node_modules/datatables.net-dt/js/dataTables.dataTables.js"
+                        ]
                     },
                     "configurations": {
                         "production": {

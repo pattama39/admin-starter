@@ -36,10 +36,11 @@ export class DbservicesService {
     }
 
     // แสดงรายเอียดสาขา
-    getBussinessDetail(code: string, id: string) {
+    getBussinessDetail(code: string, id: string, edit: boolean) {
         const myparams = {
             'hospitalCode': code,
-            'branchCode': id
+            'branchCode': id,
+            'True': edit
         };
 
         this.http.get(`${this.constant.settingAPIURL+ 'Bussiness'}/${code}/${id}`, { params: myparams })
