@@ -1,77 +1,34 @@
-<div class="flex flex-col flex-auto min-w-0">
+<div class="absolute inset-0 flex flex-col min-w-0 overflow-hidden">
 
-    <!-- Main -->
-    <div class="body flex-auto p-6 sm:p-10">
+    <mat-drawer-container class="flex-auto h-full">
 
-        <!-- CONTENT GOES HERE -->
-        <div class="h-400 min-h-400 max-h-400 border-gray-300">
+        <!-- Drawer -->
+        <mat-drawer
+            class="flex w-60 min-w-60 dark:bg-gray-900"
+            [autoFocus]="false"
+            [mode]="drawerMode"
+            [opened]="drawerOpened"
+            #matDrawer>
+            <fuse-vertical-navigation
+                [navigation]="menuData"
+                [inner]="true"
+                [mode]="'side'"
+                [name]="'docs-core-features-navigation'"
+                [opened]="true"></fuse-vertical-navigation>
+        </mat-drawer>
 
-            <div class="card border-2">
-                <div class="card-header">คลินิก</div>
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0 pb-2">
-                        <a [routerLink]="['demopair01', 'bussiness']" (onClickOrg)="['demopair01']" class="list-group-item">
-                            <div class="panel-body no-border">
-                                <h4 class="m-b-xs txt-color-blueprimary">ข้อมูลคลินิก</h4>
-                                <footer class="blockquote-footer icon-14 mt-2 mb-0">ตั้งค่าเกี่ยวกับข้อมูลคลินิก</footer>
-                            </div>
-                        </a>
-                    </blockquote>
+        <!-- Drawer content -->
+        <mat-drawer-content
+            class="flex flex-col"
+            fuseScrollReset>
 
-                    <blockquote class="blockquote mb-0 pb-2">
-                        <a [routerLink]="['demopair01', 'room']" (onClickOrg)="['demopair01']" class="list-group-item">
-                            <div class="panel-body no-border">
-                                <h4 class="m-b-xs txt-color-blueprimary">ข้อมูลห้อง</h4>
-                                <footer class="blockquote-footer icon-14 mt-2 mb-0">ตั้งค่าสำหรับการเข้าใช้งาน</footer>
-                            </div>
-                        </a>
-                    </blockquote>
-                </div>
+            <!-- Main -->
+            <div class="flex-auto">
+                <router-outlet></router-outlet>
             </div>
 
-            <div class="card border-2 mt-2">
-                <div class="card-header">ที่อยู่</div>
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0 pb-2">
-                        <a [routerLink]="['demopair01', 'room']" (onClickOrg)="['demopair01']" class="list-group-item">
-                            <div class="panel-body no-border">
-                                <h4 class="m-b-xs txt-color-blueprimary">จังหวัด</h4>
-                                <footer class="blockquote-footer icon-14 mt-2 mb-0">ข้อมูลจังหวัดสำหรับลูกค้า</footer>
-                            </div>
-                        </a>
-                    </blockquote>
+        </mat-drawer-content>
 
-                    <blockquote class="blockquote mb-0 pb-2">
-                        <a [routerLink]="['demopair01', 'bussiness']" (onClickOrg)="['demopair01']" class="list-group-item">
-                            <div class="panel-body no-border">
-                                <h4 class="m-b-xs txt-color-blueprimary">อำเภอ/เขต</h4>
-                                <footer class="blockquote-footer icon-14 mt-2 mb-0">ข้อมูลอำเภอ/เขตสำหรับลูกค้า</footer>
-                            </div>
-                        </a>
-                    </blockquote>
-
-                    <blockquote class="blockquote mb-0 pb-2">
-                        <a [routerLink]="['demopair01', 'bussiness']" (onClickOrg)="['demopair01']" class="list-group-item">
-                            <div class="panel-body no-border">
-                                <h4 class="m-b-xs txt-color-blueprimary">ตำบล/แขวง</h4>
-                                <footer class="blockquote-footer icon-14 mt-2 mb-0">ข้อมูลตำบล/แขวงสำหรับลูกค้า</footer>
-                            </div>
-                        </a>
-                    </blockquote>
-
-                    <blockquote class="blockquote mb-0 pb-2">
-                        <a [routerLink]="['demopair01', 'bussiness']" (onClickOrg)="['demopair01']" class="list-group-item">
-                            <div class="panel-body no-border">
-                                <h4 class="m-b-xs txt-color-blueprimary">ประเทศ</h4>
-                                <footer class="blockquote-footer icon-14 mt-2 mb-0">ข้อมูลประเทศสำหรับลูกค้า</footer>
-                            </div>
-                        </a>
-                    </blockquote>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
+    </mat-drawer-container>
 
 </div>
